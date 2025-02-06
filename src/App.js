@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getAllUserService } from './APIService/user';
 import { Provider } from 'react-redux'
 import { store } from './store/store';
-import Counter from './component/Counter';
+import PageRouting from './component/PageRouting/PageRouting';
 
 function App() {
 
@@ -21,14 +21,9 @@ function App() {
     get()
   }, [])
 
-  // console.log("details", details)
-
   return (
     <Provider store={store}>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <Counter />
+      <PageRouting />
     </Provider>
   );
 }
